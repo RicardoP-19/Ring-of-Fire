@@ -1,0 +1,38 @@
+.start-screen {
+  display: flex;
+  justify-content: center;
+  background-image: url('./../../assets/img/start_screen_background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  width: 100%;
+}
+
+.start-label-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 163px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 170px;
+  height: 60px;
+  font-size: 22px;
+  background-image: url('./../../assets/img/start_screen_background.jpg');
+  background-size: cover;
+  border: 2px solid #FBFECF;
+  border-radius: 50px;
+  color: #EBE0C0;
+  font-family: 'TrajanPro-Regular';
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-image: url('./../../assets/gif/fire_gif.gif');
+  background-position: center;
+  background-size: cover;
+}
