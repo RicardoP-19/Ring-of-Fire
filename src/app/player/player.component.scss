@@ -1,0 +1,22 @@
+.player {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  border: 1px solid white;
+  border-radius: 20px 0px 0px 20px;
+  background-image: url('./../../assets/img/start_screen.webp');
+  cursor: pointer;
+  >img {
+    width: 100px;
+    height: 125px;
+    border-radius: 20px 0px 0px 20px;
+    object-fit: cover;
+    object-position: top;
+  }
+  >span {
+    margin-left: 16px;
+    font-size: 24px;
+    font-family: 'TrajanPro-Regular';
+    color: white;
+  }
+}

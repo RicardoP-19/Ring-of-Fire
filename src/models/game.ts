@@ -1,5 +1,9 @@
 export class Game {
-  public players: string[] = [];
+  public players: { name: string; image: string }[] = [
+    { name: 'John', image: './assets/img/players/player_1.jpg' },
+    { name: 'The Rock', image: './assets/img/players/player_2.jpg' },
+    { name: 'Michelle', image: './assets/img/players/player_3.jpg' }
+  ];
   public stack: string[] = [];
   public playerCards: string[] = [];
   public currentPlayer: number = 0;
