@@ -27,7 +27,7 @@
 }
 
 .pick-card {
-  animation: pick-card-animation 1.25s ease-in-out;
+  animation: pick-card-animation 1.2s ease-in-out;
   transform: scale(1.2) translateX(240px) translateY(-190px) rotate(20deg);
 }
 
@@ -41,4 +41,9 @@
   100% {
     transform: scale(1.2) translateX(240px) translateY(-190px) rotate(20deg)
   }
+}
+
+.played-card {
+  right: 25px;
+  transform: scale(1.2) translateX(240px) translateY(-190px) rotate(20deg)
 }
