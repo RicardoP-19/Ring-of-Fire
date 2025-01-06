@@ -17,6 +17,8 @@
   </div>
 </div>
 
+<app-game-info [card]="currentCard"></app-game-info>
+
 <button *ngIf="!isHidden"  (click)="openDialog()" mat-fab color="warn" class="btn-add">
   <mat-icon>add</mat-icon>
 </button>

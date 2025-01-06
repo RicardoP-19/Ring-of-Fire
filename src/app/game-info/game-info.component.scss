@@ -1,0 +1,14 @@
+.card {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  left: 30px;
+  bottom: 10px;
+  width: 20%;
+  height: 150px;
+  overflow-y: auto;
+  font-size: 18px;
+  font-family: 'TrajanPro-Regular';
+  background-image: url('./../../assets/img/start_screen.webp');
+  color: #EBE0C0;
+}
