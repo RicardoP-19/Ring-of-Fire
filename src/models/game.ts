@@ -1,9 +1,5 @@
 export class Game {
-  public players: { name: string; image: string }[] = [
-    { name: 'John', image: './assets/img/players/player_1.jpg' },
-    { name: 'The Rock', image: './assets/img/players/player_2.jpg' },
-    { name: 'Michelle', image: './assets/img/players/player_3.jpg' }
-  ];
+  public players: { name: string; image: string }[] = [];
   public stack: string[] = [];
   public playerCards: string[] = [];
   public currentPlayer: number = 0;
@@ -28,4 +24,4 @@ function shuffle(array: string[]) {
       array[randomIndex], array[currentIndex]];
   }
   return array;
-};
+}
