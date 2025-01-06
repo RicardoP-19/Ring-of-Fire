@@ -7,6 +7,13 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog'
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
 
+const PLAYER_IMAGES = [
+  './../assets/img/players/player_1.jpg',
+  './../assets/img/players/player_2.jpg',
+  './../assets/img/players/player_3.jpg',
+  './../assets/img/players/player_4.jpg',
+  './../assets/img/players/player_5.jpg'
+];
 
 @Component({
   selector: 'app-game',
@@ -20,11 +27,13 @@ export class GameComponent {
   pickCardAnimation = false;
   currentCard: string = '';
   game?: Game;
+  isHidden = false;
 
   constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.newGame();
+    this.isHidden = false;
   }
 
   newGame() {
@@ -44,8 +53,20 @@ export class GameComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+    dialogRef.afterClosed().subscribe(name => {
+      if (this.game?.players && this.game?.players.length < 5) {
+        const randomImage = this.getRandomImage();
+        this.game?.players.push({ name, image: randomImage });
+      } if (this.game?.players.length == 5) {
+       this.isHidden = true; 
+      }
     });
+  }
+
+  private getRandomImage(): string {
+    const randomIndex = Math.floor(Math.random() * PLAYER_IMAGES.length);
+    const selectedImage = PLAYER_IMAGES[randomIndex];
+    PLAYER_IMAGES.splice(randomIndex, 1);
+    return selectedImage;
   }
 }

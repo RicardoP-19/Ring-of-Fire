@@ -6,9 +6,6 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-
-
-
 @Component({
   selector: 'app-dialog-add-player',
   standalone: true,
@@ -21,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './dialog-add-player.component.html',
   styleUrl: './dialog-add-player.component.scss'
 })
+
 export class DialogAddPlayerComponent {
   name: string = '';
 
