@@ -9,11 +9,11 @@ import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player
 import { GameInfoComponent } from "../game-info/game-info.component";
 
 const PLAYER_IMAGES = [
-  './../assets/img/players/player_1.jpg',
-  './../assets/img/players/player_2.jpg',
-  './../assets/img/players/player_3.jpg',
-  './../assets/img/players/player_4.jpg',
-  './../assets/img/players/player_5.jpg'
+  './assets/img/players/player_1.jpg',
+  './assets/img/players/player_2.jpg',
+  './assets/img/players/player_3.jpg',
+  './assets/img/players/player_4.jpg',
+  './assets/img/players/player_5.jpg'
 ];
 
 @Component({
