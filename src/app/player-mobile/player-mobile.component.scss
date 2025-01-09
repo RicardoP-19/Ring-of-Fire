@@ -1,0 +1,30 @@
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+  gap: 18px;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #FBFECF;
+  background-image: url('./../../assets/img/start_screen.webp');
+  word-break: break-word; 
+  cursor: pointer;
+  >img {
+    width: 100%;
+    height: 125px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: top;
+  }
+  >span {
+    padding: 3px;
+    font-size: 24px;
+    font-family: 'TrajanPro-Regular';
+    color: #EBE0C0;
+  }
+}
+
+.player-active {
+  transform: translateY(20px);
+}

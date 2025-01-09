@@ -12,9 +12,17 @@
 
 .card-stack {
   position: relative;
+  display: flex;
+  align-items: center;
   img {
     position: absolute;
     width: 140px;
+  }
+
+  @media (max-width: 920px) {
+    >img {
+      width: 100px;
+    }
   }
 }
 
@@ -28,7 +36,7 @@
 
 .pick-card {
   animation: pick-card-animation 1.2s ease-in-out;
-  transform: scale(1.2) translateX(200px) translateY(-190px) rotate(20deg);
+  transform: scale(1.2) translateX(-200px) translateY(-160px) rotate(-20deg)
 }
 
 @keyframes pick-card-animation {
@@ -39,13 +47,13 @@
     transform: scale(1.4)
   }
   100% {
-    transform: scale(1.2) translateX(200px) translateY(-190px) rotate(20deg)
+    transform: scale(1.2) translateX(-200px) translateY(-160px) rotate(-20deg)
   }
 }
 
 .played-card {
   right: 25px;
-  transform: scale(1.2) translateX(200px) translateY(-190px) rotate(20deg)
+  transform: scale(1.2) translateX(-200px) translateY(-160px) rotate(-20deg)
 }
 
 .player-position {
@@ -57,4 +65,33 @@
   position: absolute;
   right: 32px;
   bottom: 20px;
+}
+
+.player-position-mobile {
+  position: absolute;
+  width: 100%;
+}
+
+@media (max-width: 920px) {
+  .pick-card {
+    animation: pick-card-animation-mobile 1.2s ease-in-out;
+    transform: scale(1.2) translateX(150px) translateY(13px) rotate(20deg)
+  }
+
+  @keyframes pick-card-animation-mobile {
+    0% {
+      transform: scale(1)
+    }
+    50% {
+      transform: scale(1.4)
+    }
+    100% {
+      transform: scale(1.2) translateX(150px) translateY(13px) rotate(20deg)
+    }
+  }
+
+  .played-card {
+    right: 25px;
+    transform: scale(1.2) translateX(150px) translateY(13px) rotate(20deg)
+  }
 }

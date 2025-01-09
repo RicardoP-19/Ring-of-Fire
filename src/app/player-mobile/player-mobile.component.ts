@@ -2,14 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-player',
+  selector: 'app-player-mobile',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './player.component.html',
-  styleUrl: './player.component.scss'
+  templateUrl: './player-mobile.component.html',
+  styleUrl: './player-mobile.component.scss'
 })
-
-export class PlayerComponent {
+export class PlayerMobileComponent {
   @Input() name?: string;
   @Input() image?: string;
   @Input() playerActive: boolean = false;

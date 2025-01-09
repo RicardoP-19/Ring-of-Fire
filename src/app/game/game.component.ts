@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog'
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
 import { GameInfoComponent } from "../game-info/game-info.component";
+import { PlayerMobileComponent } from "../player-mobile/player-mobile.component";
 
 const PLAYER_IMAGES = [
   './assets/img/players/player_1.jpg',
@@ -19,12 +20,12 @@ const PLAYER_IMAGES = [
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, 
-            PlayerComponent, 
-            MatButtonModule, 
-            MatIconModule, 
-            GameInfoComponent, 
-            GameInfoComponent],
+  imports: [CommonModule,
+    PlayerComponent,
+    MatButtonModule,
+    MatIconModule,
+    GameInfoComponent,
+    GameInfoComponent, PlayerMobileComponent],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
 })

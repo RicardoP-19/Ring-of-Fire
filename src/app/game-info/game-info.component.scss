@@ -11,4 +11,9 @@
   font-family: 'TrajanPro-Regular';
   background-image: url('./../../assets/img/start_screen.webp');
   color: #EBE0C0;
+  
+  @media (max-width: 920px) {
+    left: 10px;
+    width: 200px;
+  }
 }

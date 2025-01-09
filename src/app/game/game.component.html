@@ -3,8 +3,16 @@
   [name]="player.name"
   [image]="player.image"
   [playerActive]="i == game?.currentPlayer"
-  class="player-position">
+  class="player-position hide-mobile">
 </app-player>
+
+<app-player-mobile *ngFor="let player of game?.players; let i = index;" 
+  [ngStyle]="{'left': (0 + (i * 20)) + '%', 'top.px': 0}"
+  [name]="player.name"
+  [image]="player.image"
+  [playerActive]="i == game?.currentPlayer"
+  class="player-position-mobile hide-desktop">
+</app-player-mobile>
 
 <div class="field">
   <div class="card-stack">
